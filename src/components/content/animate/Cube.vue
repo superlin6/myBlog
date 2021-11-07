@@ -19,49 +19,52 @@ export default {};
   padding: 0;
 }
 .cube {
-  //   width: 80px;
-  //   height: 80px;
-  position: relative;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10vw;
+  bottom: 10vh;
   transform-style: preserve-3d;
-  animation: toshow 10s infinite;
+  animation: toshow 10s linear infinite;
   @keyframes toshow {
-    0%,
-    100% {
+    0% {
       transform: rotateX(0deg) rotateY(0deg);
     }
-    50% {
-      transform: rotateX(180deg) rotateY(180deg);
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
     }
   }
   div {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    opacity: 0.5;
-    text-align: center;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &.top {
-      background-color: aqua;
-      transform: rotateX(90deg) translateZ(40px);
+      background-color: rgb(92, 235, 235);
+      transform: rotateX(90deg) translateZ(50px);
     }
     &.right {
-      background-color: yellow;
-      transform: rotateY(90deg) translateZ(40px);
+      background-color: rgb(248, 248, 20);
+      transform: rotateY(90deg) translateZ(50px);
     }
     &.bottom {
-      background-color: rgb(96, 179, 96);
-      transform: rotateX(-90deg) translateZ(40px);
+      background-color: rgb(163, 241, 163);
+      transform: rotateX(-90deg) translateZ(50px);
     }
     &.left {
-      background-color: rgb(206, 120, 120);
-      transform: rotateY(-90deg) translateZ(40px);
+      background-color: rgb(253, 98, 98);
+      transform: rotateY(-90deg) translateZ(50px);
     }
     &.ahead {
-      background-color: rgb(216, 192, 113);
-      transform: rotateY(0deg) translateZ(40px);
+      background-color: rgb(248, 205, 124);
+      transform: rotateY(0deg) translateZ(50px);
     }
     &.rear {
-      background-color: rgb(202, 148, 228);
-      transform: rotateY(180deg) translateZ(40px);
+      background-color: rgb(212, 144, 243);
+      transform: rotateY(180deg) translateZ(50px);
     }
   }
 }
