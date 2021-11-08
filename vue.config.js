@@ -10,6 +10,6 @@ module.exports = {
             resolvers:[ElementPlusResolver()],
         })
     ],
-    
+
     },
   }
